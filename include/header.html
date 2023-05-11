@@ -26,18 +26,20 @@
 <script>
   $(function () {
     var thisLocation = $(location);
+
+    if (thisLocation.attr('href').indexOf('index.html') === -1) {
+      hrefChange('a', '..');
+    } else if (thisLocation.attr('href').indexOf('index.html') >= 0) {
+      hrefChange('a', '.');
+    }
+
     function hrefChange(el, path) {
       $(el).each(function () {
         var matchHref = $(this).attr('href').split('/');
         matchHref[0] = path;
         $(this).attr('href', matchHref.join('/'));
+        console.log($(this).attr('href', matchHref.join('/')));
       });
-    }
-
-    if (thisLocation.attr('href').indexOf('index.html') !== -1) {
-      hrefChange('#top-logo a', './');
-    } else {
-      hrefChange('#top-nav a', '../');
     }
   });
 </script>
