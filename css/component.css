@@ -1,0 +1,13 @@
+.box {
+  display: flex;
+}
+.box .items {
+  box-sizing: border-box;
+  padding: 50px;
+  flex: 100%;
+  flex-shrink: 0;
+  background-color: red;
+}
+.box .items img {
+  width: 100%;
+}

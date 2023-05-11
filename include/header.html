@@ -1,0 +1,42 @@
+<h1 id="top-logo">
+  <a href="index.html">XWood</a>
+</h1>
+<nav id="top-nav">
+  <ul>
+    <li>
+      <a href="./company/introduce.html">Company</a>
+      <ul class="sub-menu">
+        <li><a href="./company/introduce.html">Introduce</a></li>
+        <li><a href="./company/ci.html">CI</a></li>
+        <li><a href="./company/history.html">History</a></li>
+      </ul>
+    </li>
+    <li><a href="./product/product.html">Product</a></li>
+    <li><a href="./gallery/gallery.html">Gallery</a></li>
+    <li>
+      <a href="./community/notice.html">Community</a>
+      <ul class="sub-menu">
+        <li><a href="./community/notice.html">Notice</a></li>
+        <li><a href="./community/faq.html">FAQ</a></li>
+      </ul>
+    </li>
+    <li><a href="./location/location.html">Location</a></li>
+  </ul>
+</nav>
+<script>
+  $(function () {
+    var thisLocation = $(location);
+    function hrefChange(el, path) {
+      $(el).each(function () {
+        var matchHref = $(this).attr('href').split('/');
+        matchHref[0] = path;
+        $(this).attr('href', matchHref.join('/'));
+      });
+    }
+
+    if (thisLocation.attr('href').indexOf('index.html') < 0) {
+      hrefChange('#top-nav a', '..');
+      hrefChange('#top-logo a', '../index.html');
+    }
+  });
+</script>

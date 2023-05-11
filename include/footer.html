@@ -1,0 +1,18 @@
+&copy;copyright all rights reserved.
+<script>
+  $(function () {
+    var thisLocation = $(location);
+    function hrefChange(el, path) {
+      $(el).each(function () {
+        var matchHref = $(this).attr('href').split('/');
+        matchHref[0] = path;
+        $(this).attr('href', matchHref.join('/'));
+      });
+    }
+
+    if (thisLocation.attr('href').indexOf('index.html') < 0) {
+      // hrefChange('#top-nav a','..');
+      // hrefChange('#top-logo a','../index.html');
+    }
+  });
+</script>

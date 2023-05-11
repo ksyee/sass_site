@@ -1,0 +1,40 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: $layoutBg;
+  color: $fontColorBasic;
+}
+
+html,
+body,
+ol,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: $fontColorPrimary;
+  transition: 0.4s;
+  &:hover {
+    // &는 a를 의미 script에서 this와 같은 역할을 한다.
+    color: $fontColorHover;
+  }
+}

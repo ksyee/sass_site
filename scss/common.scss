@@ -1,0 +1,35 @@
+//공통요소
+.gbtn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 20px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  background: $gbtnColor;
+  border: 1px solid $gbtnBorderColor;
+  &.right {
+    float: right;
+  }
+  &:hover {
+    color: $gbtnColor;
+    background: white;
+  }
+  // &.tiny {
+  //     height: 15px;
+  //     line-height: 15px;
+  // }
+  // &.small {
+  //     height: 30px;
+  //     line-height: 30px;
+  // }
+  // &.mid {
+  //     height: 80px;
+  //     line-height: 80px;
+  // }
+  // &.big {
+  //     height: 100px;
+  //     line-height: 100px;
+  // }
+}
