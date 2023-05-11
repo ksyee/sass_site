@@ -34,7 +34,7 @@
       });
     }
 
-    if (thisLocation.attr('href').indexOf('index.html') < 0) {
+    if (thisLocation.attr('href').indexOf('index.html') === -1) {
       hrefChange('#top-nav a', '..');
       hrefChange('#top-logo a', '../index.html');
     }
