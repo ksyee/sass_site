@@ -199,8 +199,11 @@ table td {
   float: left;
 }
 #wrap #header #top-logo a {
+  display: inline-block;
+  width: 84px;
   height: 60px;
   line-height: 60px;
+  background: url(../image/logo.png) no-repeat center;
 }
 #wrap #header #top-nav {
   position: relative;

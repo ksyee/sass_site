@@ -72,10 +72,7 @@ $(function () {
       var marginLeftPw = parseInt(pwElem.css('margin-left'));
       var isAni = pwElem.is(':animated');
       if (!isAni) {
-        if (
-          el.hasClass('next') &&
-          marginLeftPw > -(marginNumber * (liLeng - 5))
-        ) {
+        if (el.hasClass('next') && marginLeftPw > -(marginNumber * (liLeng - 5))) {
           //-1200
           pwElem.animate({ marginLeft: marginLeftPw - marginNumber }, 'fast');
         } else if (el.hasClass('prev') && marginLeftPw < 0) {
