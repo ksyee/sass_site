@@ -3,6 +3,7 @@ body.subpage {
   main {
     .container {
       display: flex;
+      width: 100%;
       // 왼쪽메뉴
       #lnb {
         flex: 230px;

@@ -39,6 +39,12 @@ a:hover {
   color: #e3a936;
 }
 
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 0;
+}
+
 .gbtn {
   display: inline-block;
   box-sizing: border-box;
@@ -83,56 +89,51 @@ a:hover {
   width: 100%;
 }
 
-.content.history table {
-  width: 100%;
-  margin-top: 30px;
+.subpage.history .items {
+  display: flex;
 }
-.content.history table th {
+.subpage.history .items h3.title {
+  width: 300px;
+}
+.subpage.history .items table.company-history th {
   width: 200px;
   font-size: 21px;
   font-weight: 700;
   text-align: start;
 }
-.content.history table td {
+.subpage.history .items table.company-history td {
   font-size: 21px;
   font-weight: 400;
   padding: 10px 0;
   border: none;
 }
-.content.history table td p {
+.subpage.history .items table.company-history td p {
   margin: 0;
 }
-
-table {
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-  border: 0;
-}
-table.company-summary {
-  margin-top: 30px;
-}
-table.company-summary th {
+.subpage.history .items table.company-summary th {
   width: 100px;
   line-height: 0px;
+  font-size: 21px;
   text-align: start;
   color: #000000;
   padding: 0;
 }
-table.company-summary td {
+.subpage.history .items table.company-summary td {
   padding: 8px 0;
   border: none;
 }
-table.company-summary td p {
+.subpage.history .items table.company-summary td p {
+  font-size: 21px;
   margin: 0;
 }
-table.notice + .gbtn {
+
+.subpage.notice table + .gbtn {
   margin-top: 20px;
 }
-table.notice + .gbtn.right {
+.subpage.notice table + .gbtn.right {
   float: right;
 }
-table.notice th {
+.subpage.notice table th {
   padding: 20px 15px;
   text-align: left;
   font-weight: 500;
@@ -140,7 +141,7 @@ table.notice th {
   color: white;
   text-transform: uppercase;
 }
-table.notice td {
+.subpage.notice table td {
   padding: 15px;
   height: 30px;
   text-align: left;
@@ -320,6 +321,7 @@ table.notice td {
 
 body.subpage main .container {
   display: flex;
+  width: 100%;
 }
 body.subpage main .container #lnb {
   flex: 230px;

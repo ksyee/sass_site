@@ -22,52 +22,56 @@
   }
 }
 
-// history
-.content.history {
-  table {
-    margin-top: 30px;
-    th {
-      width: 200px;
-      font-size: $fontSizeBig;
-      font-weight: 700;
-      text-align: start;
+// company > history table
+.subpage.history {
+  .items {
+    display: flex;
+    h3.title {
+      width: 300px;
     }
-    td {
-      font-size: $fontSizeBig;
-      font-weight: 400;
-      padding: 10px 0;
-      border: none;
-      p {
-        margin: 0;
+    table {
+      &.company-history {
+        th {
+          width: 200px;
+          font-size: $fontSizeBig;
+          font-weight: 700;
+          text-align: start;
+        }
+        td {
+          font-size: $fontSizeBig;
+          font-weight: 400;
+          padding: 10px 0;
+          border: none;
+          p {
+            margin: 0;
+          }
+        }
+      }
+      &.company-summary {
+        th {
+          width: 100px;
+          line-height: 0px;
+          font-size: $fontSizeBig;
+          text-align: start;
+          color: #000000;
+          padding: 0;
+        }
+        td {
+          padding: 8px 0;
+          border: none;
+          p {
+            font-size: $fontSizeBig;
+            margin: 0;
+          }
+        }
       }
     }
   }
 }
 
-table {
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-  border: 0;
-  &.company-summary {
-    margin-top: 30px;
-    th {
-      width: 100px;
-      line-height: 0px;
-      text-align: start;
-      color: #000000;
-      padding: 0;
-    }
-    td {
-      padding: 8px 0;
-      border: none;
-      p {
-        margin: 0;
-      }
-    }
-  }
-
-  &.notice {
+// community > notice table
+.subpage.notice {
+  table {
     & + .gbtn {
       margin-top: 20px;
       &.right {

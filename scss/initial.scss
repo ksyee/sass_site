@@ -38,3 +38,9 @@ a {
     color: $fontColorHover;
   }
 }
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 0;
+}
