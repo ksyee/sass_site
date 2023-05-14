@@ -1,6 +1,6 @@
 .mainbanner {
-  height: 550px;
-  background-image: url("../img/main_banner.jpg");
-  background-repeat: no-repeat;
+  width: 100%;
+  height: 500px;
+  background: url(../images/img01/main-banner01.avif) no-repeat center;
   background-size: cover;
 }

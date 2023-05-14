@@ -8,10 +8,9 @@
     #top-logo {
       float: left;
       a {
-        display: inline-block;
         width: 84px;
         @include headerHeight;
-        background: url(../image/logo.png) no-repeat center;
+        background: url(../images/img01/logo.png) no-repeat center;
       }
     }
     #top-nav {

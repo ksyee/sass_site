@@ -98,4 +98,13 @@ $(function () {
       $(this).next().slideDown();
     }
   });
+
+  // main banner slider
+  // var swiper = new Swiper('.mySwiper', {
+  //   slidesPerView: 'auto',
+  //   autoplay: {
+  //     delay: 3000,
+  //   },
+  //   draggable: true,
+  // });
 });
