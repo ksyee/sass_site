@@ -1,10 +1,11 @@
-// laytout 공통
+// layout 공통
 #wrap {
   width: $siteWidth;
   margin: 0 auto;
   #header {
     position: relative;
     height: 60px;
+    border-bottom: 2px solid $borderColorPrimary;
     #top-logo {
       float: left;
       a {

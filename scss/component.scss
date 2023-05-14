@@ -28,41 +28,44 @@
     display: flex;
     h3.title {
       width: 300px;
+      color: $fontColorTitle;
     }
     table {
+      &.company-summary {
+        th {
+          width: 100px;
+          font-size: $fontSizeBig;
+          text-align: start;
+          vertical-align: top;
+          color: $fontColorTitle;
+          padding: 15px 0;
+        }
+        td {
+          font-size: $fontSizeBig;
+          padding: 15px 0;
+          border: none;
+          p {
+            margin: 0;
+            & + p {
+              margin-top: 6px;
+            }
+          }
+        }
+      }
       &.company-history {
         th {
           width: 200px;
           font-size: $fontSizeBig;
           font-weight: 700;
+          color: $fontColorTitle;
           text-align: start;
         }
         td {
           font-size: $fontSizeBig;
           font-weight: 400;
+          vertical-align: top;
           padding: 10px 0;
           border: none;
-          p {
-            margin: 0;
-          }
-        }
-      }
-      &.company-summary {
-        th {
-          width: 100px;
-          line-height: 0px;
-          font-size: $fontSizeBig;
-          text-align: start;
-          color: #000000;
-          padding: 0;
-        }
-        td {
-          padding: 8px 0;
-          border: none;
-          p {
-            font-size: $fontSizeBig;
-            margin: 0;
-          }
         }
       }
     }
