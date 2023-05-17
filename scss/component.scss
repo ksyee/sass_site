@@ -28,20 +28,21 @@
     display: flex;
     h3.title {
       width: 300px;
+      font-size: $titleFontSizeNormal;
       color: $fontColorTitle;
     }
     table {
       &.company-summary {
         th {
           width: 100px;
-          font-size: $fontSizeBig;
+          font-size: $fontSizeNormal;
           text-align: start;
           vertical-align: top;
           color: $fontColorTitle;
           padding: 15px 0;
         }
         td {
-          font-size: $fontSizeBig;
+          font-size: $fontSizeNormal;
           padding: 15px 0;
           border: none;
           p {
@@ -55,13 +56,13 @@
       &.company-history {
         th {
           width: 200px;
-          font-size: $fontSizeBig;
+          font-size: $fontSizeNormal;
           font-weight: 700;
           color: $fontColorTitle;
           text-align: start;
         }
         td {
-          font-size: $fontSizeBig;
+          font-size: $fontSizeNormal;
           font-weight: 400;
           vertical-align: top;
           padding: 10px 0;
@@ -75,6 +76,7 @@
 // community > notice table
 .subpage.notice {
   table {
+    width: 100%;
     & + .gbtn {
       margin-top: 20px;
       &.right {
@@ -98,6 +100,36 @@
       font-size: $fontSizeNormal;
       color: $fontColorBasic;
       border-bottom: 1px solid $borderColorPrimary;
+    }
+  }
+}
+
+// product
+.content.product {
+  .items {
+    .title {
+      margin-bottom: 30px;
+    }
+    width: 100%;
+    .item-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      .item {
+        width: 343px;
+        padding: 0 20px 60px 0;
+        a {
+          width: 100%;
+          text-align: center;
+          .img {
+            border: 1px solid $borderColorPrimary;
+            border-radius: 10px;
+            overflow: auto;
+          }
+          .txt {
+            padding-top: 30px;
+          }
+        }
+      }
     }
   }
 }
@@ -191,5 +223,22 @@
         margin: 0;
       }
     }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  ul {
+    display: flex;
+    justify-content: center;
+    li {
+      width: 30px;
+      text-align: center;
+    }
+  }
+  button {
+    background-color: transparent;
+    text-transform: none;
   }
 }

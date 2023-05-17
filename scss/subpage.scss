@@ -67,6 +67,7 @@ body.subpage {
           display: inline-block;
           padding-bottom: 8px;
           line-height: 43px;
+          color: $fontColorTitle;
           &:after {
             content: '';
             position: absolute;

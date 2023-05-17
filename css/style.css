@@ -40,6 +40,14 @@ a:hover {
   color: #e3a936;
 }
 
+button {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  border: none;
+  cursor: pointer;
+}
+
 table {
   table-layout: fixed;
   border-collapse: collapse;
@@ -95,18 +103,19 @@ table {
 }
 .subpage.history .items h3.title {
   width: 300px;
+  font-size: 24px;
   color: #333333;
 }
 .subpage.history .items table.company-summary th {
   width: 100px;
-  font-size: 21px;
+  font-size: 16px;
   text-align: start;
   vertical-align: top;
   color: #333333;
   padding: 15px 0;
 }
 .subpage.history .items table.company-summary td {
-  font-size: 21px;
+  font-size: 16px;
   padding: 15px 0;
   border: none;
 }
@@ -118,19 +127,22 @@ table {
 }
 .subpage.history .items table.company-history th {
   width: 200px;
-  font-size: 21px;
+  font-size: 16px;
   font-weight: 700;
   color: #333333;
   text-align: start;
 }
 .subpage.history .items table.company-history td {
-  font-size: 21px;
+  font-size: 16px;
   font-weight: 400;
   vertical-align: top;
   padding: 10px 0;
   border: none;
 }
 
+.subpage.notice table {
+  width: 100%;
+}
 .subpage.notice table + .gbtn {
   margin-top: 20px;
 }
@@ -154,6 +166,33 @@ table {
   font-size: 16px;
   color: #666666;
   border-bottom: 1px solid #b8944d;
+}
+
+.content.product .items {
+  width: 100%;
+}
+.content.product .items .title {
+  margin-bottom: 30px;
+}
+.content.product .items .item-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.content.product .items .item-wrap .item {
+  width: 343px;
+  padding: 0 20px 60px 0;
+}
+.content.product .items .item-wrap .item a {
+  width: 100%;
+  text-align: center;
+}
+.content.product .items .item-wrap .item a .img {
+  border: 1px solid #b8944d;
+  border-radius: 10px;
+  overflow: auto;
+}
+.content.product .items .item-wrap .item a .txt {
+  padding-top: 30px;
 }
 
 .tbl-header .notice {
@@ -231,6 +270,23 @@ table {
   color: #fff;
   padding: 20px;
   margin: 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+.pagination ul {
+  display: flex;
+  justify-content: center;
+}
+.pagination ul li {
+  width: 30px;
+  text-align: center;
+}
+.pagination button {
+  background-color: transparent;
+  text-transform: none;
 }
 
 #wrap {
@@ -380,6 +436,7 @@ body.subpage main .container .sub-title span {
   display: inline-block;
   padding-bottom: 8px;
   line-height: 43px;
+  color: #333333;
 }
 body.subpage main .container .sub-title span:after {
   content: "";
