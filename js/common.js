@@ -99,27 +99,27 @@ $(function () {
   //   }
   // });
 
-  let itemQuestionH = $('dl dt');
-  console.log(itemQuestionH);
+  let question = $('.accordion dl dt');
+  let answer = $('.accordion dl dd');
+  const answerHeight = [];
 
-  $('dl dd').each((i, el) => {
-    $(el).css('height', itemQuestionH.eq(i).height() + 'px');
+  answer.each((i, el) => {
+    answerHeight.push($(el).height());
+    $(el).css('height', '0px');
   });
 
-  $('dl dt').on('click', e => {
-    $('dl dd').each((i, el) => {
-      $(el).css('height', itemQuestionH.eq(i).height() + 'px');
-    });
-
-    $(e.currentTarget).parent().toggleClass('on');
-
-    if ($(e.currentTarget).parent().hasClass('on')) {
-      $('dl dd').removeClass('on');
-      $(e.currentTarget).parent().addClass('on');
-
-      $(e.currentTarget)
-        .parent()
-        .css('height', $(e.currentTarget).height() + $(e.currentTarget).next().outerHeight() + 'px');
+  question.on('click', e => {
+    const thisIndex = $(e.currentTarget).index() / 2;
+    if (question.hasClass('on')) {
+      question.removeClass('on');
+      answer.css('height', '0px');
+      $(e.currentTarget).addClass('on');
+      answer.eq(thisIndex).css('height', answerHeight[thisIndex]);
+    } else if ($(e.currentTarget).hasClass('on')) {
+      
+    } else {
+      $(e.currentTarget).addClass('on');
+      answer.eq(thisIndex).css('height', answerHeight[thisIndex]);
     }
   });
 });

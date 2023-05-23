@@ -162,42 +162,6 @@
   }
 }
 
-// faq > accordion
-.subpage.faq {
-  .accordion {
-    dl {
-      dt {
-        position: relative;
-        height: 60px;
-        line-height: 60px;
-        padding-left: 50px;
-        &::before {
-          content: 'Q.';
-          position: absolute;
-          top: -3px;
-          left: 0;
-          font-size: 25px;
-        }
-      }
-      dd {
-        position: relative;
-        padding-left: 80px;
-        &::before {
-          content: 'A.';
-          position: absolute;
-          top: 32px;
-          left: 37px;
-          font-size: 25px;
-          color: $fontColorPrimary;
-        }
-        p {
-          padding: 0;
-        }
-      }
-    }
-  }
-}
-
 /* prev, next button */
 .navi-wrap {
   position: relative;
@@ -239,18 +203,30 @@
     width: 100%;
     margin: 0;
     dt {
-      height: 35px;
-      line-height: 35px;
+      position: relative;
+      height: 60px;
+      line-height: 60px;
       font-size: 18px;
       text-indent: 2rem;
       color: $fontColorTitle;
       border-bottom: 1px solid $borderColorPrimary;
       cursor: pointer;
+      &::before {
+        content: 'Q.';
+        position: absolute;
+        left: -25px;
+        top: -2px;
+        font-size: $titleFontSizeSmall;
+        color: $fontColorPrimary;
+      }
     }
     dd {
-      padding: 40px;
       margin: 0;
       background-color: #f7f7f7;
+      overflow: hidden;
+      &.on {
+        padding: 40px;
+      }
       p {
         color: #666666;
         padding: 20px;
