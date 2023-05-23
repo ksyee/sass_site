@@ -142,12 +142,10 @@ table {
 
 .subpage.notice table {
   width: 100%;
+  margin-top: 50px;
 }
-.subpage.notice table + .gbtn {
-  margin-top: 20px;
-}
-.subpage.notice table + .gbtn.right {
-  float: right;
+.subpage.notice table thead {
+  background-color: #b8944d;
 }
 .subpage.notice table th {
   padding: 20px 15px;
@@ -156,6 +154,10 @@ table {
   font-size: 16px;
   color: white;
   text-transform: uppercase;
+}
+.subpage.notice table th + th {
+  width: 120px;
+  text-align: center;
 }
 .subpage.notice table td {
   padding: 15px;
@@ -166,6 +168,10 @@ table {
   font-size: 16px;
   color: #666666;
   border-bottom: 1px solid #b8944d;
+}
+.subpage.notice table td + td {
+  width: 120px;
+  text-align: center;
 }
 
 .content.product .items {
@@ -195,14 +201,6 @@ table {
   padding-top: 30px;
 }
 
-.tbl-header .notice {
-  background-color: #b8944d;
-}
-
-.tbl-content .notice {
-  margin-top: 0;
-}
-
 #navi {
   width: 600px;
   overflow: hidden;
@@ -217,6 +215,35 @@ table {
 #navi .page-wrap .page {
   overflow: hidden;
   float: left;
+}
+
+.subpage.faq .accordion dl dt {
+  position: relative;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 50px;
+}
+.subpage.faq .accordion dl dt::before {
+  content: "Q.";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  font-size: 25px;
+}
+.subpage.faq .accordion dl dd {
+  position: relative;
+  padding-left: 80px;
+}
+.subpage.faq .accordion dl dd::before {
+  content: "A.";
+  position: absolute;
+  top: 32px;
+  left: 37px;
+  font-size: 25px;
+  color: #b8944d;
+}
+.subpage.faq .accordion dl dd p {
+  padding: 0;
 }
 
 /* prev, next button */
@@ -249,25 +276,31 @@ table {
   position: absolute;
 }
 
-.accordion dl {
+.accordion {
   width: 100%;
   margin: 50px auto;
+  border-top: 2px solid #222222;
+}
+.accordion dl {
+  width: 100%;
+  margin: 0;
 }
 .accordion dl dt {
   height: 35px;
   line-height: 35px;
   font-size: 18px;
   text-indent: 2rem;
-  color: #fff;
-  background-color: #b8944d;
+  color: #333333;
+  border-bottom: 1px solid #b8944d;
+  cursor: pointer;
 }
 .accordion dl dd {
-  height: 300px;
-  background-color: #d4d0c8;
+  padding: 40px;
   margin: 0;
+  background-color: #f7f7f7;
 }
 .accordion dl dd p {
-  color: #fff;
+  color: #666666;
   padding: 20px;
   margin: 0;
 }
@@ -275,18 +308,41 @@ table {
 .pagination {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 .pagination ul {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .pagination ul li {
   width: 30px;
   text-align: center;
 }
+.pagination ul li .num {
+  color: #b2b2b2;
+}
+.pagination ul li .num.on {
+  font-weight: 500;
+  color: #b8944d;
+}
 .pagination button {
+  position: relative;
+  top: 1px;
+  width: 7px;
+  height: 12px;
+  background: url(../images/img05/pagination_arrow_btn.png) no-repeat;
   background-color: transparent;
   text-transform: none;
+  text-indent: -9999px;
+}
+.pagination button.page-next {
+  margin-left: 14px;
+  background-position: -7px 0;
+}
+.pagination button.page-prev {
+  margin-right: 14px;
 }
 
 #wrap {
@@ -416,6 +472,7 @@ body.subpage main .container #lnb ul li a.on {
   padding-left: 20px;
 }
 body.subpage main .container .content {
+  width: 100%;
   min-height: calc(100vh - 191px);
 }
 body.subpage main .container .content.gallery, body.subpage main .container .content.location {
