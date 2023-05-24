@@ -73,43 +73,6 @@
   }
 }
 
-// community > notice table
-.subpage.notice {
-  table {
-    width: 100%;
-    margin-top: 50px;
-    & thead {
-      background-color: $tableBg;
-    }
-    th {
-      padding: 20px 15px;
-      text-align: left;
-      font-weight: 500;
-      font-size: $fontSizeNormal;
-      color: white;
-      text-transform: uppercase;
-      & + th {
-        width: 120px;
-        text-align: center;
-      }
-    }
-    td {
-      padding: 15px;
-      height: 30px;
-      text-align: left;
-      vertical-align: middle;
-      font-weight: 300;
-      font-size: $fontSizeNormal;
-      color: $fontColorBasic;
-      border-bottom: 1px solid $borderColorPrimary;
-      & + td {
-        width: 120px;
-        text-align: center;
-      }
-    }
-  }
-}
-
 // product
 .content.product {
   .items {
@@ -162,35 +125,45 @@
   }
 }
 
-/* prev, next button */
-.navi-wrap {
-  position: relative;
-  margin-top: 50px;
-  & > img {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    z-index: 500;
-    &.next {
-      right: 0;
-      transform: translate(100%, -50%);
-    }
-
-    &.prev {
-      left: 0;
-      transform: translate(-100%, -50%);
-    }
-  }
-}
-
-#main {
-  position: relative;
-  width: 600px;
-  height: 650px;
-  img {
+// community > notice table
+.subpage.notice {
+  table {
     width: 100%;
-    position: absolute;
-    // border: 3px solid white;
+    margin-top: 50px;
+    & thead {
+      background-color: $tableBg;
+    }
+    th {
+      padding: 20px 15px;
+      text-align: left;
+      font-weight: 500;
+      font-size: $fontSizeNormal;
+      color: white;
+      text-transform: uppercase;
+      & + th {
+        width: 120px;
+        text-align: center;
+      }
+    }
+    td {
+      height: 30px;
+      text-align: left;
+      vertical-align: middle;
+      font-weight: 300;
+      font-size: $fontSizeNormal;
+      color: $fontColorBasic;
+      border-bottom: 1px solid $borderColorPrimary;
+      & + td {
+        width: 120px;
+        text-align: center;
+      }
+      a {
+        display: block;
+        width: 100%;
+        color: $fontColorBasic;
+        padding: 15px;
+      }
+    }
   }
 }
 
@@ -224,6 +197,38 @@
         }
       }
     }
+  }
+}
+
+/* prev, next button */
+.navi-wrap {
+  position: relative;
+  margin-top: 50px;
+  & > img {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    z-index: 500;
+    &.next {
+      right: 0;
+      transform: translate(100%, -50%);
+    }
+
+    &.prev {
+      left: 0;
+      transform: translate(-100%, -50%);
+    }
+  }
+}
+
+#main {
+  position: relative;
+  width: 600px;
+  height: 650px;
+  img {
+    width: 100%;
+    position: absolute;
+    // border: 3px solid white;
   }
 }
 
