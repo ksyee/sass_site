@@ -104,22 +104,24 @@ $(function () {
   const answerHeight = [];
 
   answer.each((i, el) => {
-    answerHeight.push($(el).height());
-    $(el).css('height', '0px');
+    answerHeight.push($(el).innerHeight());
+    console.log(answerHeight);
+    $(el).css({ height: '0px' });
   });
 
   question.on('click', e => {
     const thisIndex = $(e.currentTarget).index() / 2;
-    if (question.hasClass('on')) {
-      question.removeClass('on');
-      answer.css('height', '0px');
+    if (!question.hasClass('on')) {
       $(e.currentTarget).addClass('on');
-      answer.eq(thisIndex).css('height', answerHeight[thisIndex]);
+      answer.eq(thisIndex).css({ height: answerHeight[thisIndex] });
     } else if ($(e.currentTarget).hasClass('on')) {
-      
+      $(e.currentTarget).removeClass('on');
+      answer.eq(thisIndex).css({ height: '0px' });
     } else {
+      question.removeClass('on');
+      answer.css({ height: '0px' });
       $(e.currentTarget).addClass('on');
-      answer.eq(thisIndex).css('height', answerHeight[thisIndex]);
+      answer.eq(thisIndex).css({ height: answerHeight[thisIndex] });
     }
   });
 });

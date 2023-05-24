@@ -247,6 +247,30 @@ table {
   position: absolute;
 }
 
+.subpage.faq .accordion dl dt::before {
+  content: "Q.";
+  position: absolute;
+  left: -35px;
+  top: -2px;
+  font-size: 21px;
+  color: #b8944d;
+}
+.subpage.faq .accordion dl dd {
+  padding-left: 60px;
+}
+.subpage.faq .accordion dl dd::before {
+  content: "A.";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 24px;
+  color: #888888;
+}
+.subpage.faq .accordion dl dd p {
+  color: #666666;
+  margin: 0;
+}
+
 .accordion {
   width: 100%;
   margin: 50px auto;
@@ -261,28 +285,21 @@ table {
   height: 60px;
   line-height: 60px;
   font-size: 18px;
-  text-indent: 2rem;
+  text-indent: 3rem;
   color: #333333;
   border-bottom: 1px solid #b8944d;
   cursor: pointer;
 }
-.accordion dl dt::before {
-  content: "Q.";
-  position: absolute;
-  left: -25px;
-  top: -2px;
-  font-size: 21px;
-  color: #b8944d;
+.accordion dl dt.on + dd {
+  padding: 20px 40px;
 }
 .accordion dl dd {
+  position: relative;
+  padding: 0 40px;
   margin: 0;
   background-color: #f7f7f7;
   overflow: hidden;
-}
-.accordion dl dd p {
-  color: #666666;
-  padding: 20px;
-  margin: 0;
+  transition: 0.4s;
 }
 
 .pagination {

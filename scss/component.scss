@@ -194,6 +194,39 @@
   }
 }
 
+// faq > accordion
+.subpage.faq {
+  .accordion {
+    dl {
+      dt {
+        &::before {
+          content: 'Q.';
+          position: absolute;
+          left: -35px;
+          top: -2px;
+          font-size: $titleFontSizeSmall;
+          color: $fontColorPrimary;
+        }
+      }
+      dd {
+        padding-left: 60px;
+        &::before {
+          content: 'A.';
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          font-size: $titleFontSizeNormal;
+          color: #888888;
+        }
+        p {
+          color: #666666;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
 // accordion
 .accordion {
   width: 100%;
@@ -207,31 +240,21 @@
       height: 60px;
       line-height: 60px;
       font-size: 18px;
-      text-indent: 2rem;
+      text-indent: 3rem;
       color: $fontColorTitle;
       border-bottom: 1px solid $borderColorPrimary;
       cursor: pointer;
-      &::before {
-        content: 'Q.';
-        position: absolute;
-        left: -25px;
-        top: -2px;
-        font-size: $titleFontSizeSmall;
-        color: $fontColorPrimary;
+      &.on + dd {
+        padding: 20px 40px;
       }
     }
     dd {
+      position: relative;
+      padding: 0 40px;
       margin: 0;
       background-color: #f7f7f7;
       overflow: hidden;
-      &.on {
-        padding: 40px;
-      }
-      p {
-        color: #666666;
-        padding: 20px;
-        margin: 0;
-      }
+      transition: 0.4s;
     }
   }
 }
